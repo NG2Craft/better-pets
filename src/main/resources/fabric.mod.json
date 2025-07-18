@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "better-pets",
+	"version": "${version}",
+	"name": "Better Pets",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/better-pets/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"better.pets.BetterPets"
+		],
+		"client": [
+			"better.pets.BetterPetsClient"
+		]
+	},
+	"mixins": [
+		"better-pets.mixins.json",
+		{
+			"config": "better-pets.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
