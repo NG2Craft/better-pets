@@ -13,7 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 
 public class EffectHandler {
 
-	static {
+	public static boolean initEffect () {
 		ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> {
 			Entity attacker = source.getAttacker();
 
@@ -24,14 +24,15 @@ public class EffectHandler {
 					// Stärke I Effekt für 10 Sekunden
 					owner.addStatusEffect(new StatusEffectInstance(
 						StatusEffects.STRENGTH,
+						//TODO: more Effects, apply on multiple skins, with varios breeding combinations
 						10 * 20, // 10 Sekunden in Ticks
 						0        // Stärke I
 					));
 				}
 			}
-
 			return true;
+			
 		});
+		return true;
 	}
-
 }
