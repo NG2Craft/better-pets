@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 
 import net.fabricmc.api.ModInitializer;
+import better.pets.CustomItems.ModItems;
 import better.pets.Effects.EffectHandler;
 import better.pets.MobDrops.DropHandler;
 
@@ -17,6 +18,8 @@ public class BetterPets implements ModInitializer {
 
 		DropHandler.modidfyLootTables();
 		EffectHandler.initEffect();
+		ModItems.registerModItems();
+
 		LOGGER.info("[BetterPets] Mod geladen");
 
 	}

@@ -1,6 +1,7 @@
 package better.pets.MobDrops;
 
 
+import better.pets.CustomItems.ModItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
@@ -41,7 +42,7 @@ public class DropHandler {
                 LootPool.Builder poolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(1f))
-                    .with(ItemEntry.builder(Items.DIAMOND))
+                    .with(ItemEntry.builder(ModItems.ZOMBIE_BRAIN))
                     .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(63.0f, 64.0f)).build());
                 
                 tableBuilder.pool(poolBuilder.build());
