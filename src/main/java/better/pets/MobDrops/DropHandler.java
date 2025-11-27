@@ -52,7 +52,7 @@ public class DropHandler {
                 LootPool.Builder poolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(1f))
-                    .with(ItemEntry.builder(Items.DIAMOND))
+                    .with(ItemEntry.builder(ModItems.SKELETON_RIB))
                     .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(63.0f, 64.0f)).build());
                 
                 tableBuilder.pool(poolBuilder.build());
